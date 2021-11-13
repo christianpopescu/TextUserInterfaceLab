@@ -80,18 +80,18 @@
               </goals>
             </execution>
           </executions>
-              <configuration>
-                <archive>
-                  <manifest>
-                    <mainClass>
-                      fr.vadc.java.sandbox.App
-                    </mainClass>
-                  </manifest>
-                </archive>
-                <descriptorRefs>
-                  <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-              </configuration>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>
+                  fr.vadc.java.sandbox.App
+                </mainClass>
+              </manifest>
+            </archive>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+          </configuration>
 
         </plugin>
       </plugins>
