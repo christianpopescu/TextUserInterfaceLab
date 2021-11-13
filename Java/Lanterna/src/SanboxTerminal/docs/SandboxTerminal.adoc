@@ -1,0 +1,4 @@
+= Sandbox Terminal Notes
+
+== Introduction
+Application to test Lanterna TUI.
