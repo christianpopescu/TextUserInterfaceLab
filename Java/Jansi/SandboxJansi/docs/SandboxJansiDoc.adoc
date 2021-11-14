@@ -1,0 +1,20 @@
+= Sandbox Ansi Doc
+Doc Writer <christian.popescu@outlook.com>
+v 1.0, 2021-11-14
+:sectnums:
+:toc:
+:toclevels: 5
+
+
+== Introduction
+
+Test the use of Jansi library
+
+== Log
+
+. Create mvn simple archetype
+
+. Add maven assembly pluggin
+
+
+
