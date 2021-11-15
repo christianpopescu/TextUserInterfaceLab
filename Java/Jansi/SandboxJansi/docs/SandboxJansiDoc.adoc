@@ -17,4 +17,5 @@ Test the use of Jansi library
 . Add maven assembly pluggin
 
 
+https://www.unicode.org/charts/PDF/U2500.pdf[Unicode for box drawing]
 
