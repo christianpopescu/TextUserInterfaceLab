@@ -28,4 +28,11 @@ Test the use of Jansi library
 
 https://www.unicode.org/charts/PDF/U2500.pdf[Unicode for box drawing]
 
-. Unicode box correct printed in Windows but not in Ming
+
+=== To do
+
+. Check how to be notified that screen size changed
+
+=== Issues 
+
+. Unicode box correct printed in Windows but not in Ming -> solved 
