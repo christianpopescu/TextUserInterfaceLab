@@ -22,7 +22,10 @@ public class SandboxJansiApp
 
         System.out.println( ansi().eraseScreen().fg(RED).a("Hello").fg(GREEN).a(" World").reset());
         System.out.println( "Hello World!" );
+        String unicodeMessage = "\u4e16\u754c\u4f60\u597d\uff01";
+        System.out.println(unicodeMessage);
         int height = 0;
+        
         int width = 0 ;
         try {
             Terminal terminal = TerminalBuilder.terminal();
@@ -35,7 +38,10 @@ public class SandboxJansiApp
         }
         System.out.println(Charset.defaultCharset().name());
         byte[] b = new byte[]{0x25,0x50,0x00};
-        String value = new String(b,StandardCharsets.UTF_8);
+        StringBuilder sb = new StringBuilder();
+        sb.append("\u2550");
+        System.out.print("\u2550");
+        String value = sb.toString();
         for (int i=0; i<width; i++) {
 
             System.out.print( ansi().cursor(0, i).fg(RED).a(value).reset());

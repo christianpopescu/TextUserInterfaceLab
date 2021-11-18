@@ -10,6 +10,15 @@ v 1.0, 2021-11-14
 
 Test the use of Jansi library
 
+=== Building 
+
+
+   mvn package assembly:single
+
+=== Running
+
+ java -jar  -Dfile.encoding=UTF-8 target/SandboxJansi-1.0-SNAPSHOT-jar-with-dependencies.jar
+
 == Log
 
 . Create mvn simple archetype
@@ -19,3 +28,4 @@ Test the use of Jansi library
 
 https://www.unicode.org/charts/PDF/U2500.pdf[Unicode for box drawing]
 
+. Unicode box correct printed in Windows but not in Ming
