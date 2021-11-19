@@ -27,12 +27,18 @@ public class SandboxJansiApp
         int height = 0;
         
         int width = 0 ;
+
         try {
             Terminal terminal = TerminalBuilder.terminal();
             height = terminal.getHeight();
             width = terminal.getWidth();
-
             System.out.print(ansi().cursor(height/2, width/2).a( MessageFormat.format("Columns: {0} | Rows: {1}", width, height)));
+
+            String text = scanner.nextLine();
+            height = terminal.getHeight();
+            width = terminal.getWidth();
+            System.out.print(ansi().cursor(height/2, width/2).a( MessageFormat.format("Columns: {0} | Rows: {1}", width, height)));
+
         } catch (java.io.IOException ex) {
             System.out.println( "Can't init terminal" );
         }
@@ -52,6 +58,16 @@ public class SandboxJansiApp
             System.out.print( ansi().cursor(i, width-1).fg(BLUE).a("*").reset());
         }
         String text = scanner.nextLine();
+        try {
+            Terminal terminal = TerminalBuilder.terminal();
+            height = terminal.getHeight();
+            width = terminal.getWidth();
+
+            System.out.print(ansi().cursor(height/2, width/2).a( MessageFormat.format("Columns: {0} | Rows: {1}", width, height)));
+        } catch (java.io.IOException ex) {
+            System.out.println( "Can't init terminal" );
+        }
+        scanner.nextLine();
         AnsiConsole.systemUninstall();
     }
 }
