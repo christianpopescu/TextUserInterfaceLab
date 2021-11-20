@@ -29,7 +29,7 @@ public class SandboxJansiApp
         int width = 0 ;
 
         try {
-            Terminal terminal = TerminalBuilder.terminal();
+            Terminal terminal = TerminalBuilder.builder().system(true).signalHandler(new TerminalSignalHandler()).build();
             height = terminal.getHeight();
             width = terminal.getWidth();
             System.out.print(ansi().cursor(height/2, width/2).a( MessageFormat.format("Columns: {0} | Rows: {1}", width, height)));

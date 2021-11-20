@@ -19,6 +19,10 @@ Test the use of Jansi library
 
  java -jar  -Dfile.encoding=UTF-8 target/SandboxJansi-1.0-SNAPSHOT-jar-with-dependencies.jar
 
+
+=== Starting a debug session
+ java -agentlib:jdwp=transport=dt_shmem,address=jdbconn,server=y,suspend=n -jar  -Dfile.encoding=UTF-8 target/SandboxJansi-1.0-SNAPSHOT-jar-with-dependencies.jar
+
 == Log
 
 . Create mvn simple archetype
