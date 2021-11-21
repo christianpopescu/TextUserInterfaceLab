@@ -27,9 +27,8 @@ Test the use of Jansi library
 
 . Create mvn simple archetype
 
-. Add maven assembly plugin
+. Add maven assembly pluggin
 
-. Add maven asciidoctor plugin to test Asciidoctor document generation (but does not work)
 
 https://www.unicode.org/charts/PDF/U2500.pdf[Unicode for box drawing]
 
@@ -41,5 +40,3 @@ https://www.unicode.org/charts/PDF/U2500.pdf[Unicode for box drawing]
 === Issues 
 
 . Unicode box correct printed in Windows but not in Ming -> solved 
-
-. Problems in Powershell the -Dfile.encoding not well parsed

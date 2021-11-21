@@ -17,6 +17,7 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <jline.version>3.21.0</jline.version>
+    <asciidoctor.maven.plugin.version>2.2.1</asciidoctor.maven.plugin.version>
   </properties>
 
   <dependencies>
@@ -35,6 +36,11 @@
       <groupId>org.jline</groupId>
       <artifactId>jline</artifactId>
       <version>3.21.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.asciidoctor</groupId>
+      <artifactId>asciidoctorj</artifactId>
+      <version>2.5.2</version>
     </dependency>
 
   </dependencies>
@@ -104,6 +110,30 @@
               <descriptorRef>jar-with-dependencies</descriptorRef>
             </descriptorRefs>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.asciidoctor</groupId>
+          <artifactId>asciidoctor-maven-plugin</artifactId>
+          <version>2.2.1</version>
+          <dependencies>
+          <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj</artifactId>
+            <version>2.5.2</version>
+          </dependency>
+          </dependencies>
+          <configuration>
+            <sourceDirectory>src/asciidoc</sourceDirectory>
+          </configuration>
+          <executions>
+            <execution>
+              <id>asciidoc-to-html</id>
+              <phase>generate-resources</phase>
+              <goals>
+                <goal>process-asciidoc</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
